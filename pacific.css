@@ -1,0 +1,315 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #eaeaea;
+  color: #666666;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  color: #1976d2;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-shadow: 2px 2px 2px #cccccc;
+}
+
+h3 {
+  color: #000033;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.container {
+  background-image: linear-gradient(to bottom, #ffffff, #90c7e3);
+}
+
+.header {
+  background-color: #002171;
+}
+.header__heading {
+  color: #ffffff;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  padding-top: 0.3em;
+  padding-bottom: 0.5em;
+  letter-spacing: 0.25em;
+}
+.header__heading a {
+  text-decoration: none;
+}
+.header__heading a:link,
+.header__heading a:visited {
+  color: #ffffff;
+}
+.header__heading a:hover {
+  color: #90c7e3;
+}
+
+.navigation {
+  font-weight: bold;
+  padding: 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.navigation__list {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+  gap: 15px;
+}
+.navigation__list-item {
+  border-bottom: 1px solid #050546;
+}
+.navigation__list-item a {
+  text-decoration: none;
+  transition: color 2s ease-out;
+}
+.navigation__list-item a:link {
+  color: #5c7fa3;
+}
+.navigation__list-item a:visited {
+  color: #344873;
+}
+.navigation__list-item a:hover {
+  color: #a52a2a;
+}
+
+.home-hero {
+  background-image: url(assets/images/coast2.jpg);
+  height: 300px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.yurt-hero {
+  background-image: url(assets/images/yurt.jpg);
+  height: 300px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.home-content {
+  padding-left: 30px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  background-color: #ffffff;
+  margin-bottom: 0;
+  overflow: auto;
+}
+
+.home-content__video {
+  float: right;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.home-content__resort,
+.reservations-content__resort {
+  color: #1976d2;
+  font-weight: bold;
+}
+
+.home-content__list {
+  list-style-image: url(assets/images/marker.gif);
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+  font-size: 1, 2em;
+  gap: 15px;
+}
+
+.yurt-content,
+.activity-content,
+.reservations-content {
+  padding-left: 30px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  background-color: #ffffff;
+  margin-bottom: 0;
+  overflow: auto;
+}
+
+.yurt-content__table {
+  border: 2px solid #3399cc;
+  border-collapse: collapse;
+}
+.yurt-content__table-row:nth-of-type(odd) {
+  background-color: #f5fafc;
+}
+.yurt-content__table-header {
+  padding: 0.5em;
+  border: 2px solid #3399cc;
+}
+.yurt-content__table-cell {
+  padding: 0.5em;
+  border: 2px solid #3399cc;
+  text-align: center;
+}
+.yurt-content__table-cell--left {
+  text-align: left;
+}
+
+.activity-hero {
+  background-image: url(assets/images/trail.jpg);
+  height: 300px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.reservations-content__form {
+  margin-top: 0px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.reservations-content__form-input {
+  margin-bottom: 1em;
+  padding: 2px 2px;
+}
+.reservations-content__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 10px;
+  gap: 20px;
+}
+.reservations-content__buttons-type {
+  background-color: #002171;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.reservations-content__contact {
+  margin-top: 8px;
+}
+
+.footer {
+  font-size: 0.75rem;
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+@media (min-width: 600px) {
+  .navigation__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 8px 0;
+  }
+  .navigation__list-item {
+    border-bottom: none;
+  }
+
+  h2 {
+    grid-row: 1/2;
+    grid-column: 1/5;
+  }
+
+  .yurt-content__offers {
+    display: grid;
+    grid-row: auto;
+    grid-column: 1/5;
+  }
+
+  .activity-content {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .yurt-content__faq,
+  .activity-content__activity-type {
+    padding-left: 2em;
+    padding-right: 2em;
+    grid-row: 2/3;
+    grid-column: auto;
+  }
+
+  .reservations-content__form {
+    display: grid;
+    grid-template-columns: 6em 1fr;
+    grid-template-rows: auto;
+    width: 60%;
+    gap: 1em;
+    flex-flow: unset;
+  }
+
+  .reservations-content__buttons {
+    grid-column: 2/3;
+    margin-top: 0;
+    margin-bottom: 25px;
+    grid-row: unset;
+  }
+
+  footer {
+    grid-row: auto;
+    grid-column: 1/5;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 80%;
+    margin: auto;
+    border: 2px solid #000033;
+    border-top-width: 0;
+    border-right-width: 0;
+    box-shadow: 3px 3px 3px #666666;
+    display: grid;
+    grid-template-columns: 180px auto;
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .activity-content {
+    display: grid;
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+
+  .header {
+    grid-row: 1/2;
+    grid-column: 1/3;
+  }
+
+  .navigation {
+    padding-left: 1em;
+    text-align: left;
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+  .navigation__list {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+  }
+
+  .home-hero {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+
+  .home-content {
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+
+  .yurt-content {
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+
+  .yurt-content__packages {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+
+  .footer {
+    grid-row: 4/5;
+    grid-column: 2/3;
+  }
+}
