@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pacific Trails Resort :: Reservations</title>
+    <link rel="stylesheet" href="pacific.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="header__heading">
+          <a href="index.html">Pacific Trails Resort</a>
+        </h1>
+      </header>
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__list-item"><a href="index.html">Start</a></li>
+          <li class="navigation__list-item"><a href="yurt.html">Yurts</a></li>
+          <li class="navigation__list-item">
+            <a href="activity.html">Activity</a>
+          </li>
+          <li class="navigation__list-item">
+            <a href="reservations.html">Reservations</a>
+          </li>
+        </ul>
+      </nav>
+      <main class="reservations-content">
+        <h2>Reservations at Pacific Trails Resort</h2>
+        <h3>Contact us today</h3>
+        <p>Required fields are marked with an asterisk (*)</p>
+        <form
+          class="reservations-content__form"
+          method="post"
+          action="https://webdevbasics.net/scripts/pacific.php"
+        >
+          <label for="myFirstName">* First name:</label>
+          <input
+            class="reservations-content__form-input"
+            type="text"
+            name="myFirstName"
+            id="myFirstName"
+            required="required"
+          />
+          <label for="myLastName">* Last name:</label>
+          <input
+            class="reservations-content__form-input"
+            type="text"
+            name="myLastName"
+            id="myLastName"
+            required="required"
+          />
+          <label for="myEmail">* E-mail:</label>
+          <input
+            class="reservations-content__form-input"
+            type="email"
+            name="myEmail"
+            id="myEmail"
+            required="required"
+          />
+          <label for="myPhone">Phone number:</label>
+          <input
+            class="reservations-content__form-input"
+            type="tel"
+            name="myPhone"
+            id="myPhone"
+            maxlength="14"
+          />
+          <label for="myDate">Arrival date:</label>
+          <input
+            class="reservations-content__form-input"
+            type="date"
+            name="myDate"
+            id="myDate"
+          />
+          <label for="myNights">Number of nights:</label>
+          <input
+            class="reservations-content__form-input"
+            type="number"
+            name="myNights"
+            id="myNights"
+            min="1"
+            max="14"
+          />
+          <label for="myComments">* Remarks:</label>
+          <textarea
+            class="reservations-content__form-input"
+            name="myComments"
+            id="myComments"
+            cols="30"
+            rows="2"
+            required="required"
+          ></textarea>
+          <div class="reservations-content__buttons">
+            <input
+              class="reservations-content__buttons-type"
+              type="submit"
+              value="Send"
+            />
+            <input
+              class="reservations-content__buttons-type"
+              type="reset"
+              value="Clear"
+            />
+          </div>
+        </form>
+        <div class="reservations-content__contact">
+          <span class="reservations-content__resort">
+            Pacific Trails Resort
+          </span>
+          <br />
+          12010 Pacific Trails Road <br />
+          Zephyr, CA 95555 <br />
+          <br />
+          888-555-555
+        </div>
+      </main>
+      <footer class="footer">
+        Copyright &copy 2022 Pacific Trails Resort<br />
+        <span>Kinga Mirosław</span>
+      </footer>
+    </div>
+  </body>
+</html>
